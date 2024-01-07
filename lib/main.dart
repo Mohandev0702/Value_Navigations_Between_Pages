@@ -55,40 +55,6 @@ class _MyHomePageState extends State<MyHomePage> {
                   decoration: BoxDecoration(
                       color: Colors.teal,
                       borderRadius: BorderRadius.circular(20.0)),
-                  child: const Center(
-                    child: Text(
-                      'Hi There',
-                      style: TextStyle(fontSize: 20),
-                    ),
-                  ),
-                ),
-              ),
-              GestureDetector(
-                onTap: () {},
-                child: Container(
-                  margin: EdgeInsets.all(10),
-                  width: double.maxFinite,
-                  height: 100,
-                  decoration: BoxDecoration(
-                      color: Colors.teal,
-                      borderRadius: BorderRadius.circular(20.0)),
-                  child: Center(
-                    child: Text(
-                      'Hi There',
-                      style: TextStyle(fontSize: 20),
-                    ),
-                  ),
-                ),
-              ),
-              GestureDetector(
-                onTap: () {},
-                child: Container(
-                  margin: EdgeInsets.all(10),
-                  width: double.maxFinite,
-                  height: 100,
-                  decoration: BoxDecoration(
-                      color: Colors.teal,
-                      borderRadius: BorderRadius.circular(20.0)),
                   child: Center(
                     child: Text(
                       'Hi There',
