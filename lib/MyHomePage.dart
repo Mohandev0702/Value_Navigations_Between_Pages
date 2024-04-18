@@ -35,12 +35,12 @@ class _MyHomePageState extends State<MyHomePage> {
                   width: double.maxFinite,
                   height: 100,
                   decoration: BoxDecoration(
-                      color: Color(0xff89dad0),
+                      color: const Color(0xff89dad0),
                       borderRadius: BorderRadius.circular(20.0)),
                   child: Center(
                     child: Text(
                       tapController.x.toString(),
-                      style: TextStyle(fontSize: 20),
+                      style: const TextStyle(fontSize: 20),
                     ),
                   ),
                 );
