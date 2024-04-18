@@ -1,89 +1,40 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:workspace/Controller/tap_controller.dart';
+import 'package:get/get_navigation/src/root/get_material_app.dart';
 
-void main() => runApp(MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: MyHomePage(),
-    ));
+import 'MyHomePage.dart';
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key});
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
+void main() {
+  runApp(const MyApp());
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+// This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    TapController controller = Get.put(TapController());
-    return Scaffold(
-      body: Stack(children: [
-        Container(
-          height: double.maxFinite,
-          width: double.maxFinite,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              GestureDetector(
-                onTap: () {
-                  controller.increaseX();
-                },
-                child: Container(
-                  margin: EdgeInsets.all(10),
-                  width: double.maxFinite,
-                  height: 100,
-                  decoration: BoxDecoration(
-                      color: Colors.teal,
-                      borderRadius: BorderRadius.circular(20.0)),
-                  child: Center(
-                    child: Text(
-                      'Hi There',
-                      style: TextStyle(fontSize: 20),
-                    ),
-                  ),
-                ),
-              ),
-              GestureDetector(
-                onTap: () {},
-                child: Container(
-                  margin: EdgeInsets.all(10),
-                  width: double.maxFinite,
-                  height: 100,
-                  decoration: BoxDecoration(
-                      color: Colors.teal,
-                      borderRadius: BorderRadius.circular(20.0)),
-                  child: Center(
-                    child: Text(
-                      'Hi There',
-                      style: TextStyle(fontSize: 20),
-                    ),
-                  ),
-                ),
-              ),
-              GestureDetector(
-                onTap: () {},
-                child: Container(
-                  margin: EdgeInsets.all(10),
-                  width: double.maxFinite,
-                  height: 100,
-                  decoration: BoxDecoration(
-                      color: Colors.teal,
-                      borderRadius: BorderRadius.circular(20.0)),
-                  child: Center(
-                    child: Text(
-                      'Hi There',
-                      style: TextStyle(fontSize: 20),
-                    ),
-                  ),
-                ),
-              ),
-            ],
-          ),
-        ),
-      ]),
+    return GetMaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+// This is the theme of your application.
+//
+// TRY THIS: Try running your application with "flutter run". You'll see
+// the application has a blue toolbar. Then, without quitting the app,
+// try changing the seedColor in the colorScheme below to Colors.green
+// and then invoke "hot reload" (save your changes or press the "hot
+// reload" button in a Flutter-supported IDE, or press "r" if you used
+// the command line to start the app).
+//
+// Notice that the counter didn't reset back to zero; the application
+// state is not lost during the reload. To reset the state, use hot
+// restart instead.
+//
+// This works for code too, not just values: Most code changes can be
+// tested with just a hot reload.
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
+      ),
+      home: MyHomePage(),
     );
   }
 }
